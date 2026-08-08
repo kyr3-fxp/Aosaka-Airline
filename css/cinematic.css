@@ -1,0 +1,186 @@
+/* ==========================================================================
+   AOSAKA AIRLINES - HIGH CONTRAST & LEGIBILITY STYLES (css/cinematic.css)
+   Guarantees 100% crystal-clear typography legibility across all hero elements.
+   ========================================================================== */
+
+body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Top Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #EF4444, #F59E0B, #DC2626);
+  z-index: 10000;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ==========================================================================
+   HIGH LEGIBILITY SEARCH BOX CONTAINER (Apple Liquid Glass Solid Contrast)
+   ========================================================================== */
+.search-box-container {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(25px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45) !important;
+  color: #0F172A !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+}
+
+.search-box-container:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 35px 75px rgba(0, 0, 0, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* High Contrast Input Capsules */
+.search-box-container .input-group {
+  background: #F8FAFC !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.search-box-container .input-group:hover, 
+.search-box-container .input-group:focus-within {
+  border-color: #94A3B8 !important; /* Neutral grey border instead of red */
+  background: #FFFFFF !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.search-box-container .input-group img {
+  filter: none !important;
+}
+
+.search-box-container input, 
+.search-box-container select {
+  color: #0F172A !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+.search-box-container select option {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+/* 3D Tilt Card Styles (No Red Border or Glow on Hover) */
+.tilt-card, .card-offer, .flight-card, .checkin-view-box, .faq-item, .boarding-pass-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 20px !important;
+  color: #0F172A !important;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06) !important;
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+.tilt-card:hover, .card-offer:hover, .flight-card:hover, .faq-item:hover {
+  border-color: #CBD5E1 !important; /* Neutral clean border on hover, NO RED */
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Neutral Specular Glare (No Red) */
+.tilt-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tilt-card:hover::before {
+  opacity: 1;
+}
+
+.card-title, .faq-header, .flight-time {
+  color: #0F172A !important;
+}
+
+.card-subtitle, .faq-body, .flight-loc, .flight-line-icon span {
+  color: #64748B !important;
+}
+
+.card-price {
+  color: #EF4444 !important;
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Route Transition Overlay */
+.cinematic-wipe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0F172A;
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.cinematic-wipe.active {
+  opacity: 1;
+  filter: blur(0px);
+  pointer-events: auto;
+}
+
+/* Apple Style Pill Badge & Buttons */
+.apple-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: 30px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #EF4444;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: #EF4444 !important;
+  color: #FFFFFF !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary:hover {
+  background: #DC2626 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5) !important;
+}

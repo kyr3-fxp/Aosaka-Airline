@@ -39,20 +39,19 @@ a {
 
 .contenedor_imagen_principal {
     width: 100%;
-    height: 827px;
+    height: 480px;
     background-color: rgb(0, 0, 0);
 }
 
 .imagen_principal {
     width: 100%;
     height: 100%;
-    background-image: url(assest/imagen_principal_aosaka.svg);
-    background-position: inherit;
+    background-image: url(assest/somos_hero.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     flex-wrap: wrap;
-    position: relative;
 }
 
 /* Texto principal (Somos Aosaka) */

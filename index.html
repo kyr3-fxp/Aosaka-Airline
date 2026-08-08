@@ -1,312 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="img/jpg" href="assest/Group 54.jpg" />
-  <title>Aosaka</title>
+  <meta name="description" content="Aosaka Airlines - Experiencia Premium en reserva de vuelos, hoteles, alquiler de autos, check-in online y servicios a bordo." />
+  
+  <!-- System Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/views.css" />
+  <link rel="stylesheet" href="css/cinematic.css" />
+  
+  <!-- Typography & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assest/Group 54.jpg" />
+  
+  <!-- ES6 MVC Application Module -->
+  <script type="module" src="js/app.js"></script>
+  
+  <title>Aosaka Airlines - Experiencia Premium</title>
 </head>
 
-
-<!-- Cuerpo de la pagina -->
-
 <body>
-  <!--Cabecera de la pagina-->
-  <header>
-    <!-- Logo de la pagina -->
-    <div class="logo">
-      <img src="assest/Group 55.svg" alt="logotipo de la empresa" />
-    </div>
-    <!-- links para navegar en el header -->
-    <nav>
-      <a href="" class="Inicio">Inicio</a>
-      <a href="check.html" class="Check-In">Check-In</a>
-      <a href="vuelos.html" class="Ofertas y destinos">Ofertas y destinos</a>
-      <a href="" class="Información y ayuda">Información y ayuda</a>
-    </nav>
-    <!-- Inisio de sesión -->
-    <div class="sesion">
-      <img src="assest/user 1.png" alt="user" />
-      <a href="inicio_sesion.html">Iniciar sesión</a>
-    </div>
-  </header>
-  <!--Imagen grande principal -->
-  <div class="Rectangle13">
-    <img width="100%" src="assest/Rectangle 13.svg" alt="Rectangle13" />
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
 
+  <!-- Header Navbar Mount Point -->
+  <div id="navbar-mount"></div>
 
-    <!-- Buscador de vuelos -->
-    <div class="contenedor_posicion_1">
-      <div class="buscar_vuelos">
-        <div id="radioButtom">
-          <div class="radio_group">
-            <input type="radio" id="ida_vuelta" name="tipo_vuelo" checked />
-            <label for="ida_vuelta">Ida y vuelta</label>
-          </div>
-          <div class="radio_group">
-            <input type="radio" id="solo_ida" name="tipo_vuelo" />
-            <label for="solo_ida">Solo ida</label>
-          </div>
+  <!-- SPA View Mount Container -->
+  <div id="app"></div>
+
+  <!-- Footer Main -->
+  <footer class="footer-main">
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <a href="#home"><img src="assest/Aosaka.svg" alt="Aosaka Airlines Logo" /></a>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <div class="footer-col-title">Descubre y compra</div>
+          <ul class="footer-links">
+            <li><a href="#vuelos">Mejores ofertas</a></li>
+            <li><a href="#hoteles">Reserva de hoteles</a></li>
+            <li><a href="#hoteles">Alquiler de autos</a></li>
+            <li><a href="#mascotas">Viaja con tu mascota</a></li>
+            <li><a href="#home">Asistencia en viajes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Sobre nosotros</div>
+          <ul class="footer-links">
+            <li><a href="#home">Somos Aosaka</a></li>
+            <li><a href="#home">Trabaja con nosotros</a></li>
+            <li><a href="#home">Noticias corporativas</a></li>
+            <li><a href="#home">Sostenibilidad</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contactar</div>
+          <ul class="footer-links">
+            <li><a href="#home">Colombia: +57 601 000 0000</a></li>
+            <li><a href="#home">Norteamérica: +1 800 000 0000</a></li>
+            <li><a href="#home">Europa: +34 900 000 000</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Enlaces rápidos</div>
+          <ul class="footer-links">
+            <li><a href="#home">Información legal</a></li>
+            <li><a href="#home">Políticas de privacidad</a></li>
+            <li><a href="#home">Artículos restringidos</a></li>
+            <li><a href="#pago">Factura electrónica</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="buscar_vuelos2">
-        <div class="input_origen">
-          <img src="assest/avion_origen.svg" alt="Icono origen" />
-          <div style="display: flex; flex-direction: column;">
-            <span style="font-size: 12px; color: #888;">Origen</span>
-            <span style="font-weight: 600;">Bogotá (BOG)</span>
-          </div>
-        </div>
-
-        <hr class="separador" />
-
-        <div class="input_destino">
-          <img src="assest/avion_destino.svg" alt="Icono destino" />
-          <span style="font-weight: 600;">Destino</span>
-        </div>
-
-        <div class="fechas">
-          <div class="input_fecha ida">
-            <img src="assest/calendario.svg" alt="Icono calendario" />
-            <input type="text" placeholder="Fecha de ida" />
-          </div>
-
-          <!-- <hr class="separador_horizontal" /> -->
-
-          <div class="input_fecha regreso">
-            <img src="assest/calendario.svg" alt="Icono calendario" />
-            <input type="text" placeholder="Fecha de regreso" />
-          </div>
-        </div>
-
-        <button class="boton_buscar">Buscar</button>
-      </div>
-    </div>
-
-
-
-
-  </div>
-
-  </div>
-  <div class="contenedor_texto_principal">
-    <div class="txt_1">
-      <h1>Ofertas de viaje por menos de $366.744</h1>
-    </div>
-  </div>
-  <!-- Primer texto -->
-
-  <!-- Contenedor de los vuelos con ofertas -->
-  <div class="contenedor_2">
-    <div class="caja">
-      <div class="img_1">
-        <img src="assest/bahamas.svg" alt="" />
-      </div>
-      <div class="items">
-        <p class="titulo1">Las Bahamas </p>
-        <p class="hora1">1 h 5 m, directo </p>
-        <p class="fecha1">sáb 19/4 ▹ vie 26/4 </p>
-        <p class="precio1">Desde $200.042</p>
-      </div>
-    </div>
-    <div class="caja">
-      <div class="img_1">
-        <img src="assest/valledupar.svg" alt="" />
-      </div>
-      <div class="items">
-        <p class="titulo1">Valledupar, Cesar </p>
-        <p class="hora1">1 h 33 m, directo </p>
-        <p class="fecha1">mie 23/4 ▹ vie 23/5 </p>
-        <p class="precio1">Desde $250.000</p>
-      </div>
-    </div>
-    <div class="caja">
-      <div class="img_1">
-        <img src="assest/santa_marta.svg" alt="" />
-      </div>
-      <div class="items">
-        <p class="titulo1">Santa Marta </p>
-        <p class="hora1">1 h 36 m, directo </p>
-        <p class="fecha1">mie 23/4 ▹ vie 23/5 </p>
-        <p class="precio1">Desde $190.042</p>
-      </div>
-    </div>
-  </div>
-  <!-- Banner publicitario -->
-  <div class="contenedor_3">
-    <div class="banner">
-      <img src="assest/banner1.svg" alt="" />
-    </div>
-    <div class="banner_2">
-      <p id="p">¡Tu próxima aventura te espera!</p>
-      <p id="p2">
-        Reserva tu vuelo con nosotros y vive la experiencia de viajar sin
-        complicaciones.
-      </p>
-      <a id="ancla" href="">Compra ya</a>
-    </div>
-  </div>
-
-  <!-- Segundo texto -->
-  <div class="txt_2">
-    <h1>Busquedas destacadas</h1>
-  </div>
-  <!-- Contenedor de los vuelos con calificación ó estrellas -->
-  <div class="contenedor_4">
-    <div class="caja_2">
-      <div class="img_2">
-        <img src="assest/punta-cana-bavaro.svg" alt="">
-        <div class="items_2">
-          <p class="titulo2">Punta Cana, R. Dominicana</p>
-          <p class="hora2">2 h 48 m, directo</p>
-          <p class="fecha2">mie 23/4 ▹ vie 23/5</p>
-          <p class="precio2">Desde $885.970</p>
-          <img src="assest/5 estrellas.svg" alt="">
-          <a href="">¡Ver ahora!</a>
-        </div>
-      </div>
-    </div>
-    <div class="caja_2">
-      <div class="img_2">
-        <img src="assest/isla_mujeres.svg" alt="">
-        <div class="items_2">
-          <p class="titulo2">Isla Mujeres, Mexico</p>
-          <p class="hora2">2 h 12 m, directo</p>
-          <p class="fecha2">mie 23/4 ▹ vie 23/5</p>
-          <p class="precio2">Desde $580.026</p>
-          <img src="assest/4 estrellas y media.svg" alt="">
-          <a href="">¡Ver ahora!</a>
-        </div>
-
-      </div>
-    </div>
-    <div class="caja_2">
-      <div class="img_2">
-        <img src="assest/islas_canarias.svg  " alt=" ">
-        <div class="items_2">
-          <p class="titulo2">Islas Canarias</p>
-          <p class="hora2">1 h 30 m, directo</p>
-          <p class="fecha2">mie 23/4 ▹ vie 23/5</p>
-          <p class="precio2">Desde $2.455.730</p>
-          <img src="assest/4 estrellas.svg" alt="">
-          <a href="">¡Ver ahora!</a>
-        </div>
-      </div>
-    </div>
-    <div class="caja_2">
-      <div class="img_2">
-        <img src="assest/pattaya.svg" alt="">
-        <div class="items_2">
-          <p class="titulo2">Pattaya Beach</p>
-          <p class="hora2">3 h 20 m, directo</p>
-          <p class="fecha2">mie 23/4 ▹ vie 23/5</p>
-          <p class="precio2">Desde $9.726.459</p>
-          <img src="assest/3 estrellas.svg" alt="">
-          <a href="">¡Ver ahora!</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Contenedor de opciones para hoteles, mascotas y comida -->
-  <div class="ver_ahora">
-
-    <div class="opcion1">
-      <p class="p">
-        ¡Combo de hoteles y
-      </p>
-      <p class="p_"> vehiculos!</p>
-      <a href="hoteles_vehiculos.html">¡Ver ahora!</a>
-    </div>
-
-    <div class="opcion2">
-      <p class="p">
-        ¿Quieres llevar tu
-      </p>
-      <p class="p_"> mascota?</p>
-      <a href="Mascotas.html">¡Ver ahora!</a>
-    </div>
-
-    <div class="opcion3">
-      <p class="p">
-        Aprovecha de <br> nuestro menú
-      </p>
-      <p class="p__"> a bordo</p>
-      <a href="comida_aosaka.html">¡Ver ahora!</a>
-    </div>
-
-  </div>
-  <!-- Texto grande de preguntas -->
-  <div class="preguntas_1">
-    <div class="rp">
-      <h1 style="font-size: 64px">
-        Respondemos a<br />
-        tus preguntas
-      </h1>
-    </div>
-    <div class="contenedor_6">
-      <!-- Imagen grande de preguntas -->
-      <div class="img_preguntas"> <img src="assest/3d-speech-bubble-with-question-mark_165488-6090 1.svg" alt=""></div>
-      <!-- Preguntas frecuentes -->
-      <div class="preguntas_2">
-        <div class="pregunta">¿Cómo se usan los filtros de búsqueda?
-          <img src="assest/flecha_abajo.svg" alt="">
-        </div>
-        <div class="pregunta">¿Tengo que conocer al anfitrión en persona?
-          <img src="assest/flecha_abajo.svg" alt="">
-        </div>
-        <div class="pregunta">¿Qué pasa si tengo que cancelar una reservación?
-          <img src="assest/flecha_abajo.svg" alt="">
-        </div>
-        <div class="pregunta">¿Necesitas más información?
-          <img src="assest/flecha_abajo.svg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Pie de pagina -->
-  <footer>
-    <div class="pie_pagina">
-      <div class="logo_pie_pagina"><img src="assest/Aosaka.svg" alt=""></div>
-      <div class="contenedor_5">
-        <div class="descubre"> Descubre y compra
-          <div class="mejor_oferta">Mejores ofertas</div>
-          <div class="mejor_oferta">Reserva de hoteles</div>
-          <div class="mejor_oferta">Alquiler de autos</div>
-          <div class="mejor_oferta">Viaja con tu mascota</div>
-          <div class="mejor_oferta">Asistencia en viajes</div>
-        </div>
-        <div class="descubre">Sobre nosotros
-          <div class="mejor_oferta"><a href="somos_aosaka.html">Somos Aosaka</a></div>
-          <div class="mejor_oferta">Trabaja con nosotros</div>
-          <div class="mejor_oferta">Noticias corporativas</div>
-          <div class="mejor_oferta">Sostenibilidad</div>
-        </div>
-        <div class="descubre">Contactar
-          <div class="mejor_oferta">Comunícate desde Colombia</div>
-          <div class="mejor_oferta">Comunícate desde Norteamérica</div>
-          <div class="mejor_oferta">Comunícate desde Centroamérica</div>
-          <div class="mejor_oferta">Comunícate desde Suramérica</div>
-          <div class="mejor_oferta">Comunícate desde Europa</div>
-        </div>
-        <div class="descubre">Enlaces rápidos
-          <div class="mejor_oferta">Inforamción legal</div>
-          <div class="mejor_oferta">Políticas de privacidad</div>
-          <div class="mejor_oferta">Artículos restringidos</div>
-          <div class="mejor_oferta">Factura electrónica</div>
-        </div>
-      </div>
-      <div class="redes_sociales">
-        <p>¡Síguenos y conoce<br> más sobre nosotros!</p>
-        <div class="iconos_redes">
-          <img src="assest/facebook.svg" alt="Facebook">
-          <img src="assest/instagram.svg" alt="Instagram">
-          <img src="assest/x.svg" alt="X">
-          <img src="assest/youtube.svg" alt="YouTube">
+      <div>
+        <div style="font-weight: 600; margin-bottom: 12px;">¡Síguenos y conoce más sobre nosotros!</div>
+        <div class="social-icons">
+          <a target="_blank" rel="noopener" href="https://www.facebook.com/"><img src="assest/facebook.svg" alt="Facebook"></a>
+          <a target="_blank" rel="noopener" href="https://www.instagram.com/"><img src="assest/instagram.svg" alt="Instagram"></a>
+          <a target="_blank" rel="noopener" href="https://twitter.com/"><img src="assest/x.svg" alt="X"></a>
+          <a target="_blank" rel="noopener" href="https://www.youtube.com/"><img src="assest/youtube.svg" alt="YouTube"></a>
         </div>
       </div>
     </div>

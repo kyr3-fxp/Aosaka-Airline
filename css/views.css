@@ -1,0 +1,315 @@
+/* ==========================================================================
+   AOSAKA AIRLINES - VIEW-SPECIFIC STYLES & FAQ ACCORDION (css/views.css)
+   ========================================================================== */
+
+/* Hero Section & Form */
+.hero-section {
+  position: relative;
+  background-color: var(--secondary);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+}
+
+.search-box-wrapper {
+  position: relative;
+  margin-top: -120px;
+  z-index: 10;
+}
+
+.search-box-container {
+  background: #FFF;
+  border-radius: var(--radius-md);
+  padding: 24px 30px;
+  box-shadow: var(--shadow-lg);
+}
+
+.search-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+}
+
+.search-tab-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-main);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.input-group img {
+  width: 20px;
+  height: 20px;
+}
+
+.input-group input, .input-group select {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .search-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ Accordion Section with Smooth Expand Animation */
+.faq-section {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.faq-title h2 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #FFF !important;
+  border-radius: var(--radius-md) !important;
+  padding: 20px 26px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+  cursor: pointer;
+  border: 1px solid var(--border-light) !important;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.faq-item:hover {
+  border-color: var(--primary) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.12) !important;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-dark) !important;
+}
+
+.faq-icon {
+  font-size: 14px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-muted);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.faq-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin-top 0.3s ease !important;
+  color: var(--text-muted) !important;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 0;
+  display: block !important;
+}
+
+.faq-item.active .faq-body {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 14px;
+}
+
+/* Flight View & Filter Bar */
+.flight-filter-bar {
+  background: #FFF;
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.filter-tab {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-main);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-tab.active, .filter-tab:hover {
+  background: var(--primary);
+  color: #FFF;
+}
+
+.flight-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.flight-card {
+  background: #FFF;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.flight-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.flight-route-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.flight-time-loc {
+  text-align: center;
+}
+
+.flight-time {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.flight-loc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.flight-line-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 120px;
+}
+
+.flight-line-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  border-top: 2px dashed var(--border-light);
+}
+
+.flight-price-box {
+  text-align: right;
+}
+
+.flight-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Check-In Modal / Container */
+.checkin-view-box {
+  background: #FFF;
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.boarding-pass-card {
+  background: linear-gradient(135deg, var(--secondary) 0%, #1E293B 100%);
+  color: #FFF;
+  border-radius: var(--radius-md);
+  padding: 30px;
+  margin-top: 24px;
+}
+
+.boarding-pass-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+/* Food Menu & Cart Sidebar */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.cart-sidebar {
+  position: fixed;
+  right: -380px;
+  top: 0;
+  width: 360px;
+  height: 100vh;
+  background: #FFF;
+  box-shadow: var(--shadow-lg);
+  z-index: 2000;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+/* Checkout View */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+@media (max-width: 868px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}

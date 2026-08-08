@@ -114,8 +114,8 @@ a {
 .imagen {
     width: 100%;
     height: 429px;
-    background-image: url(assest/img_principal_mascota.svg);
-    background-position: inherit;
+    background-image: url(assest/mascotas_hero.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -267,8 +267,8 @@ a {
 .contenedor_img_4 {
     width: 100%;
     height: 576px;
-    background-image: url(assest/full-shot-smiley-woman-with-cute-dog\ 1.svg);
-    background-position: inherit;
+    background-image: url(assest/mascotas_hero.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
