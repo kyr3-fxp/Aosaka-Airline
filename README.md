@@ -4,8 +4,17 @@
 [![JavaScript ES6+](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![CSS3 Vanilla](https://img.shields.io/badge/CSS3-Vanilla-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![Architecture](https://img.shields.io/badge/Architecture-MVC-8B5CF6?style=for-the-badge)](#-arquitectura-mvc)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-22C55E?style=for-the-badge&logo=github)](https://kyr3-fxp.github.io/Aosaka-Airline/)
 
 Bienvenido al repositorio oficial de **Aosaka Airlines**, una plataforma web moderna e interactiva reconstruida bajo el patrón de arquitectura **Model-View-Controller (MVC)** en JavaScript ES6 modular puro, acompañada de un sistema de diseño **Apple Liquid Glass UI** y un motor gráfico **3D Vectorial**.
+
+---
+
+## 🌐 Sitio Web en Línea (Despliegue GitHub Pages)
+
+La aplicación se encuentra desplegada y lista para usar en producción a través de **GitHub Pages**:
+
+🚀 **Enlace directo a la aplicación:** [https://kyr3-fxp.github.io/Aosaka-Airline/](https://kyr3-fxp.github.io/Aosaka-Airline/)
 
 ---
 
@@ -67,6 +76,21 @@ d:\Aosaka\
 │       └── ScrollAnimation.js   # Controlador de animaciones al hacer scroll
 └── assest/                      # Recursos de imágenes JPG y vectores SVG
 ```
+
+---
+
+## 🛠️ Despliegue & Publicación en GitHub Pages
+
+Para publicar actualizaciones en GitHub Pages:
+
+1. Realizar los cambios en la rama `develop`.
+2. Fusionar los cambios en la rama `main`:
+   ```bash
+   git checkout main
+   git merge develop
+   git push origin main
+   ```
+3. GitHub Pages construirá y desplegará automáticamente la nueva versión desde la rama `main`.
 
 ---
 
